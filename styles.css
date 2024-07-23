@@ -36,7 +36,7 @@ header {
    display: flex;
    align-items: center;
    justify-content: flex-end;
-   background-color: var(--blue-prussian);
+   background-color: var(--azure);
    min-height: 77px;
 }
 
