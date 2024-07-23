@@ -101,7 +101,7 @@ a:hover {
 }
 
 .home__section--container {
-    background-color: var(--azure70);
+    /* background-color: var(--azure70); */
     min-height: 10rem;
     display: flex;
     align-items: center;
@@ -115,7 +115,7 @@ a:hover {
     
 .home__section--left {
     max-width: 50%;
-    padding: 1dvh;
+    padding: 3dvh;
 }
 .home__section--right {
     align-items: center;
@@ -157,6 +157,28 @@ h1 {
     margin-bottom: 2rem;
 }
 
+
+.skills__items {
+    list-style-type: none;
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.skills__item img {
+    height: 3rem;
+}
+
+.skill__item {
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+.skill__item:hover {
+    /* scale: 1.05; */
+    transform: scale(1.1);
+}
 
 /* About  */
 
@@ -233,5 +255,13 @@ footer {
     .home__section--left {
         text-align: center;
         margin-top: 1dvh;
+    }
+
+    @media (max-width: 600px) {
+        .skills__items {
+            flex-wrap: wrap;
+            max-width: 70%;
+            margin: 0 auto;
+        }
     }
 }
