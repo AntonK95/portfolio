@@ -102,7 +102,7 @@ a:hover {
 
 .home__section--container {
     /* background-color: var(--azure70); */
-    min-height: 10rem;
+    min-height: 65dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,16 +122,16 @@ a:hover {
 }
 
 .img__container {
-background-image: url(UtPaTur.jpg);
-background-repeat: round;
-background-color: var(--blue-prussian);
-background: linear-gradient(45deg, 0%, 100%);
-animation: morph 8s ease-in-out infinite;
-border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-min-height: 20rem;
-transition: all 1s ease-in-out;
-min-width: 20rem;
-z-index: 5;
+    background-image: url(UtPaTur.jpg);
+    background-color: var(--blue-prussian);
+    background: linear-gradient(45deg, 0%, 100%);
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    min-height: 20rem;
+    transition: all 1s ease-in-out;
+    min-width: 20rem;
+    background-position: center;
+    background-size: cover;
 }
 
 @keyframes morph {
@@ -151,8 +151,8 @@ z-index: 5;
    } 
 }
 
-h1 {
-    font-size: clamp(1rem, 10vw, 2rem);;
+h1, h2 {
+    font-size: clamp(1rem, 10vw, 2rem);
     font-weight: 900;
     margin-bottom: 2rem;
 }
@@ -188,6 +188,46 @@ h1 {
     min-height: 10rem;
 }
 
+.about__section h2 {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.about__me--container {
+    margin: 0 auto;
+    /* max-width: 20rem; */
+    min-height: 65dvh;
+    padding: 0 2rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.about__img {
+    background-image: url(UtPaTur.jpg);
+    background-color: var(--blue-prussian);
+    min-height: 25rem;
+    min-width: 25rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.about__section--right {
+    /* max-width: 50%; */
+    margin: auto;
+}
+
+.about__section--left {
+    margin: auto;
+}
+
+.about__me--text {
+    font-family: var(--font-family);
+    color: var(--blue-prussian);
+    font-size: 30px;
+    white-space-collapse: preserve-breaks;
+}
 
 /* Projects  */
 
@@ -255,6 +295,13 @@ footer {
     .home__section--left {
         text-align: center;
         margin-top: 1dvh;
+        max-width: none;
+    }
+
+    .about__me--container {
+        grid-template-columns: auto;
+        justify-content: center;
+        gap: 1rem;
     }
 
     @media (max-width: 600px) {
