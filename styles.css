@@ -261,7 +261,7 @@ h1, h2 {
 }
 
 .about__img {
-    background-image: url(/img/UtPaTur.jpg);
+    background-image: url(/img/Lovattnet.JPG);
     background-color: var(--blue-prussian);
     min-height: 25rem;
     min-width: 25rem;
@@ -345,9 +345,19 @@ h1, h2 {
     background-image: url(/img/whereits@mockup-hand.png);
 }
 
-.mmdb {
+.mmdb__grupp {
     border-radius: 0px 3px 3px 0px;
+    background-image: url(/img/MMDBgrupp_mockup.png);
+}
+
+.mmdb {
+    border-radius: 3px 0px 0px 3px;
     background-image: url(/img/MMDB_mockup.png);
+}
+
+.portfolio {
+    border-radius: 0px 3px 3px 0px;
+    background-image: url(/img/portfolio__mockup.png);
 }
 
 .project__desc {
@@ -435,7 +445,7 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        background: rgba( 255, 255, 255, 0.10 );
+        background: rgba( 255, 255, 255, 0.6 );
         box-shadow: 0 8px 32px 0 var(--blue-prussian30);
         backdrop-filter: blur( 4px );
         border-radius: 10px;
@@ -477,6 +487,10 @@ footer {
             max-width: min-content;
             margin: 0 auto;
         }
+        .project__cards--section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
         .project__card:nth-child(even) {
             flex-direction: column;
         }
@@ -504,6 +518,9 @@ footer {
             flex-wrap: wrap;
             max-width: 70%;
             margin: 0 auto;
+        }
+        .project__cards--section {
+            display: flex;
         }
     }
 }
