@@ -339,6 +339,21 @@ h1, h2 {
     flex-direction: row-reverse;
 }
 
+.try-btn {
+    font-family: var(--font-family);
+    color: var(--azure);
+    font-size: 24px;
+    background-color: var(--blue-prussian);
+    border: none;
+    border-radius: 3px;
+    padding: .5rem;
+    margin: 1rem;
+}
+
+.try-btn a {
+    color: var(--azure);
+}
+
 /* different images */
 
 .whereitsat {
