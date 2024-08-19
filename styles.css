@@ -405,6 +405,7 @@ h1, h2 {
     padding: 1rem;
     margin: 0 auto;
     font-size: 24px;
+    margin-top: auto;
 }
 
 /* Footer */
@@ -540,7 +541,8 @@ footer {
             flex-grow: 1;
         }
         .project__desc {
-            max-width: max-content;
+            /* max-width: max-content; */
+            margin-top: 0;
         }
         .project__img {
             border-radius: 3px 3px 0px 0px
