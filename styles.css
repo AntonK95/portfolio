@@ -322,13 +322,13 @@ h1, h2 {
     border-radius: 3px 0px 0px 3px;
 } 
 /* Detta fungerar inte.. */
-.project__img:nth-child(even) {
+/* .project__img:nth-child(even) {
     border-radius: 0px 3px 3px 0px;
-}
+} */
 
 .project__card {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     box-shadow: 0px 0px 17px -5px;
     border-radius: 3px;
     max-width: 55rem;
@@ -339,20 +339,46 @@ h1, h2 {
     flex-direction: row-reverse;
 }
 
+.project__card--inner {
+    display: grid;
+}
+
 .try-btn {
-    font-family: var(--font-family);
-    color: var(--azure);
+    align-self: end;
+    margin: 0 0 1rem 1rem;
+    display: inline-block;
+    padding: 10px 20px;
     font-size: 24px;
-    background-color: var(--blue-prussian);
-    border: none;
-    border-radius: 3px;
-    padding: .5rem;
-    margin: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--azure);
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    max-width: max-content;
 }
 
 .try-btn a {
-    color: var(--azure);
+    color: var(--blue-prussian);
 }
+
+.try-btn:hover {
+    background-color: #fff;
+    color: var(--azure10);
+    border: 2px solid var(--blue-prussian);
+    box-shadow: 5px 5px 0px var(--blue-prussian70);
+}
+
+.try-btn:active {
+    background-color: var(--azure30);
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
 
 /* different images */
 
@@ -511,12 +537,16 @@ footer {
         }
         .project__card--inner {
             padding: 1rem;
+            flex-grow: 1;
         }
         .project__desc {
             max-width: max-content;
         }
         .project__img {
             border-radius: 3px 3px 0px 0px
+        }
+        .try-btn {
+            margin-top: auto;
         }
     }
 
