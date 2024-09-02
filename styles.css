@@ -329,7 +329,7 @@ h1, h2 {
 .project__card {
     display: flex;
     /* align-items: center; */
-    box-shadow: 0px 0px 17px -5px;
+    box-shadow: 0px 0px 8px -5px;;
     border-radius: 3px;
     max-width: 55rem;
 }
