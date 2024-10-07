@@ -177,7 +177,7 @@ input.hamburger {
 }
 
 .img__container {
-    background-image: url(/img/UtPaTur.jpg);
+    background-image: url(/img/utpatur.jpg);
     background-color: var(--blue-prussian);
     background: linear-gradient(45deg, 0%, 100%);
     animation: morph 8s ease-in-out infinite;
@@ -261,7 +261,7 @@ h1, h2 {
 }
 
 .about__img {
-    background-image: url(/img/Lovattnet.JPG);
+    background-image: url(/img/lovattnet.jpg);
     background-color: var(--blue-prussian);
     min-height: 25rem;
     min-width: 25rem;
@@ -315,7 +315,7 @@ h1, h2 {
 
 
 .project__img {
-    background-image: url(/img/whereits@mockup-hand.png);
+    background-image: url(/img/whereitsat.png);
     min-height: 20rem;
     min-width: 20rem;
     background-position: center;
@@ -389,22 +389,22 @@ h1, h2 {
 /* different images */
 
 .whereitsat {
-    background-image: url(/img/whereits@mockup-hand.png);
+    background-image: url(/img/whereitsat.png);
 }
 
 .mmdb__grupp {
     border-radius: 0px 3px 3px 0px;
-    background-image: url(/img/MMDBgrupp_mockup.png);
+    background-image: url(/img/mmdbgrupp_mockup.png);
 }
 
 .mmdb {
     border-radius: 3px 0px 0px 3px;
-    background-image: url(/img/MMDB_mockup.png);
+    background-image: url(/img/mmdbmockup.png);
 }
 
 .portfolio {
     border-radius: 0px 3px 3px 0px;
-    background-image: url(/img/portfolio__mockup.png);
+    background-image: url(/img/portfoliomockup.png);
 }
 
 .project__desc {
