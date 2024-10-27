@@ -389,12 +389,12 @@ h1, h2 {
 /* different images */
 
 .whereitsat {
-    background-image: url(/img/whereitsat.png);
+    background-image: url(./img/whereitsat.png);
 }
 
 .mmdb__grupp {
     border-radius: 0px 3px 3px 0px;
-    background-image: url(/img/mmdbgrupp_mockup.png);
+    background-image: url(./img/mmdbgrupp_mockup.png);
 }
 
 .mmdb {
