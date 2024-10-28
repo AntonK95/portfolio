@@ -33,11 +33,24 @@
 
 
 header {
-   display: flex;
-   align-items: center;
-   justify-content: flex-end;
-   background-color: var(--azure);
-   min-height: 77px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--azure);
+    min-height: 77px;
+}
+
+header.scrolled {
+    top: 1rem;
+    background-color: var(--azure);
+    transition: all ease-in-out 1s;
+    border-radius: 50px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0px 0px 8px -5px;
 }
 
 .header__items {
@@ -98,26 +111,27 @@ input.hamburger {
 }
 
 /* Hantera transformationen av span när menyn är öppen */
-.hamburger:checked ~ span:nth-child(1) {
+.hamburger:checked~span:nth-child(1) {
     display: none;
 }
 
-.hamburger:checked ~ span:nth-child(2) {
+.hamburger:checked~span:nth-child(2) {
     transform: rotate(45deg);
     top: 5px;
 }
 
-.hamburger:checked ~ span:nth-child(3) {
+.hamburger:checked~span:nth-child(3) {
     transform: rotate(-45deg);
     top: -6px;
 }
+
 /* Tydligen så skapas ytterligare en span som vi måste ta bort.. */
-.hamburger:checked ~ span:nth-child(4) {
+.hamburger:checked~span:nth-child(4) {
     display: none;
 }
 
 /* Gör hamburgarmenyn synlig när checkboxen är checked */
-.hamburger:checked ~ .hamburger__items {
+.hamburger:checked~.hamburger__items {
     display: flex;
 }
 
@@ -153,7 +167,7 @@ input.hamburger {
 .home__text {
     font-size: 30px;
 }
-    
+
 .home__section--left {
     max-width: 50%;
     padding: 3dvh;
@@ -163,12 +177,16 @@ input.hamburger {
 }
 
 .fa-linkedin-square,
-.fa-github {
+.fa-github,
+.fa-envelope {
     color: var(--font-family);
     font-size: 48px;
 }
-.fa-linkedin-square:hover, 
-.fa-github:hover {
+
+.fa-linkedin-square:hover,
+.fa-github:hover,
+.fa-envelope:hover {
+    cursor: pointer;
     color: var(--blue-prussian70);
 }
 
@@ -190,23 +208,24 @@ input.hamburger {
 }
 
 @keyframes morph {
- 0% {
-           border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-           background: linear-gradient(45deg, 0%, 100%);
-   } 
-   
-   50% {
-           border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
-           background: linear-gradient(45deg, 0%, 100%);
-   }
- 
-   100% {
-       border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-       background: linear-gradient(45deg, 0%, 100%);
-   } 
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, 0%, 100%);
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        background: linear-gradient(45deg, 0%, 100%);
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, 0%, 100%);
+    }
 }
 
-h1, h2 {
+h1,
+h2 {
     font-size: clamp(1rem, 10vw, 2rem);
     font-weight: 900;
     margin-bottom: 2rem;
@@ -232,6 +251,7 @@ h1, h2 {
     cursor: pointer;
     transition: all ease-in-out .3s;
 }
+
 .skill__item:hover {
     /* scale: 1.05; */
     transform: scale(1.1);
@@ -257,7 +277,7 @@ h1, h2 {
     padding: 0 2rem 2rem 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
+
 }
 
 .about__img {
@@ -284,7 +304,8 @@ h1, h2 {
     color: var(--blue-prussian);
     font-size: 30px;
     white-space-collapse: preserve-breaks;
-    max-width: 30ch; /* max 30 characters per row*/
+    max-width: 30ch;
+    /* max 30 characters per row*/
 }
 
 /* Projects  */
@@ -309,7 +330,7 @@ h1, h2 {
     text-align: center;
 }
 
-.projects__title a{
+.projects__title a {
     text-decoration: underline var(--blue-prussian);
 }
 
@@ -321,7 +342,8 @@ h1, h2 {
     background-position: center;
     background-size: cover;
     border-radius: 3px 0px 0px 3px;
-} 
+}
+
 /* Detta fungerar inte.. */
 /* .project__img:nth-child(even) {
     border-radius: 0px 3px 3px 0px;
@@ -330,7 +352,7 @@ h1, h2 {
 .project__card {
     display: flex;
     /* align-items: center; */
-    box-shadow: 0px 0px 8px -5px;;
+    box-shadow: 0px 0px 8px -5px;
     border-radius: 3px;
     max-width: 55rem;
 }
@@ -388,6 +410,10 @@ h1, h2 {
 
 /* different images */
 
+.interval {
+    background-image: url(./img/iphone-x-mockup.png);
+}
+
 .whereitsat {
     background-image: url(./img/whereitsat.png);
 }
@@ -428,6 +454,10 @@ h1, h2 {
     grid-area: email;
 }
 
+.fa-envelope {
+    font-size: 42px;
+}
+
 .contact__section {
     font-family: var(--font-family);
     color: var(--blue-prussian);
@@ -456,10 +486,11 @@ h4 {
 .contact__title {
     grid-area: 1 / span 4;
 }
+
 .linkedin {
     grid-area: 2 / span 2;
 }
-  
+
 .email {
     grid-area: 2 / span 2;
 }
@@ -506,14 +537,20 @@ footer {
 
 
 @media only screen and (max-width: 900px) {
-    
+
+    header.scrolled {
+        justify-self: end;
+        width: fit-content;
+    }
+
     .header__items {
         display: none;
     }
 
     .hamburger-menu {
         display: flex;
-        margin-right: 4rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
     }
 
     .hamburger__items {
@@ -523,14 +560,14 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
         min-width: 15rem;
-        min-height: 20rem; 
+        min-height: 20rem;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        background: rgba( 255, 255, 255, 0.6 );
+        background: rgba(255, 255, 255, 0.6);
         box-shadow: 0 8px 32px 0 var(--blue-prussian30);
-        backdrop-filter: blur( 4px );
+        backdrop-filter: blur(4px);
         border-radius: 10px;
         overflow: hidden;
         z-index: 999;
@@ -544,14 +581,15 @@ footer {
         text-shadow: 0px 0px 4px white;
     }
 
-    .hamburger-menu input:checked ~ .hamburger__items {
+    .hamburger-menu input:checked~.hamburger__items {
         display: flex;
-    } 
+    }
 
     .home__section--container {
         display: flex;
         flex-direction: column-reverse;
     }
+
     .home__section--left {
         text-align: center;
         margin-top: 1dvh;
@@ -571,24 +609,30 @@ footer {
             max-width: min-content;
             margin: 0 auto;
         }
+
         .project__cards--section {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
+
         .project__card:nth-child(even) {
             flex-direction: column;
         }
+
         .project__card--inner {
             padding: 1rem;
             flex-grow: 1;
         }
+
         .project__desc {
             /* max-width: max-content; */
             margin-top: 0;
         }
+
         .project__img {
             border-radius: 3px 3px 0px 0px
         }
+
         .try-btn {
             margin-top: auto;
         }
@@ -608,6 +652,7 @@ footer {
             max-width: 70%;
             margin: 0 auto;
         }
+
         .project__cards--section {
             display: flex;
         }
