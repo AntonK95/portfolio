@@ -35,6 +35,19 @@ document.addEventListener('click', function(event) {
 });
 
 
+// Välj header-elementet
+const header = document.querySelector("header");
+
+// Funktion som körs vid scroll
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
+
 // Animate cards on scroll
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
